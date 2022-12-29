@@ -1,2 +1,6 @@
-\contentsline {chapter}{\numberline {第一章\hspace {.3em}}The First Chapter}{1}{}%
-\contentsline {chapter}{\numberline {第二章\hspace {.3em}}The Second Chapter}{3}{}%
+\contentsline {section}{摘要}{I}{}%
+\contentsline {section}{Abstract}{II}{}%
+\contentsline {chapter}{目录}{III}{}%
+\contentsline {section}{图清单}{IV}{}%
+\contentsline {section}{表清单}{V}{}%
+\contentsline {section}{变量注释表}{VI}{}%

@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{thesis-lntu}
-\LoadClass[fontset=none, AutoFakeBold, 12pt]{ctexbook}
+\LoadClass[fontset=none, AutoFakeBold]{ctexbook}
 \ctexset{fontset=windows} %指定字体库为windows
 % xetex/xelatex 字体设定宏包
 \ProvidesPackage{zhfontcfg}
@@ -37,7 +37,6 @@
 \setCJKsansfont{黑体}%无衬线字体
 \setCJKmonofont{楷体}%等宽字体
 \setCJKfamilyfont{boldsong}{Source Han Serif SC Heavy}
-\newCJKfontfamily\sonti{FZCuSong-B09S}[BoldFont=FZCuSong-B09S]
 
 % \setmainfont{Times New Roman}
 % \newcommand{\tm}{\fontspec{Times New Roman}}
@@ -247,50 +246,9 @@
   \addcontentsline{toc}{section}{Abstract}
 }{\clearpage}
 
-\newcommand{\keywordCN}{ \par \noindent \setlength{\baselineskip}{21pt}  \sonti{关键词：}  }
-
-\newcommand{\keywordEN}{ \par \noindent \setlength{\baselineskip}{21pt}  \textbf{Keywords:}  }
-
-% \usepackage{titletoc}
-% \titlecontents{chapter}[1em]{\bfseries \vspace{1pt}}{\contentslabel{1em}}{\hspace*{-1em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
-% \titlecontents{section}[3em]{\vspace{1pt}}{\contentslabel{1.5em}}{\hspace*{-4em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
-% \titlecontents{subsection}[5em]{\vspace{1pt}}{\contentslabel{2.3em}}{\hspace*{-4em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
-\newenvironment{Figurelist}{
-  \titleformat*{\section}{\clearpage\heiti \bfseries \centering \LARGE}
-    \setlength{\baselineskip}{21pt}
-  \section*{图清单}
-  \addcontentsline{toc}{section}{图清单}
-}{\clearpage}
-\newenvironment{Tablelist}{
-  \titleformat*{\section}{\heiti \bfseries \centering \LARGE}
-    \setlength{\baselineskip}{21pt}
-  \section*{表清单}
-  \addcontentsline{toc}{section}{表清单}
-}{\clearpage}
-\newenvironment{variablecomment}{
-  \titleformat*{\section}{\heiti \bfseries \centering \LARGE}
-    \setlength{\baselineskip}{21pt}
-  \section*{变量注释表}
-  \addcontentsline{toc}{section}{变量注释表}
-}{\clearpage}
-
-% \renewcommand\tableofcontents{%
-%   \null\hfill\textbf{\Large\contentsname}\hfill\null\par
-%   \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
-%   \@starttoc{toc}%
-% }
-
-% \renewcommand{\tableofcontents}{%
-% \addcontentsline{toc}{chapter}{目录}
-% \tableofcontents
-% }
-
-% \newcommand{\contents}{\addcontentsline{toc}{chapter}{目录}\tableofcontents}
-% 目录字体设置
-% \usepackage{subfigure}
-% \usepackage[subfigure]{tocloft}
-% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % 目录后一行连续的点
-% \renewcommand{\cftsecfont}{\rmfamily}
-% \renewcommand{\cftsecpagefont}{\rmfamily}
-% 目录居中
-% \renewcommand*\contentsname{\hfill 目~~录 \hfill}
+\newcommand{\keywordCN}{ \noindent\begin{spacing}{21pt}%段落行距设置
+  \zihao{-4}
+  \noindent
+  \bfseries\textbf{ 关键词:}
+  
+  \end{spacing}  }

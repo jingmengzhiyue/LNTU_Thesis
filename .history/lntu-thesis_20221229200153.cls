@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{thesis-lntu}
-\LoadClass[fontset=none, AutoFakeBold, 12pt]{ctexbook}
+\LoadClass[fontset=none, AutoFakeBold]{ctexbook}
 \ctexset{fontset=windows} %指定字体库为windows
 % xetex/xelatex 字体设定宏包
 \ProvidesPackage{zhfontcfg}
@@ -267,30 +267,9 @@
   \section*{表清单}
   \addcontentsline{toc}{section}{表清单}
 }{\clearpage}
-\newenvironment{variablecomment}{
+\newenvironment{Tablelist}{
   \titleformat*{\section}{\heiti \bfseries \centering \LARGE}
     \setlength{\baselineskip}{21pt}
   \section*{变量注释表}
   \addcontentsline{toc}{section}{变量注释表}
 }{\clearpage}
-
-% \renewcommand\tableofcontents{%
-%   \null\hfill\textbf{\Large\contentsname}\hfill\null\par
-%   \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
-%   \@starttoc{toc}%
-% }
-
-% \renewcommand{\tableofcontents}{%
-% \addcontentsline{toc}{chapter}{目录}
-% \tableofcontents
-% }
-
-% \newcommand{\contents}{\addcontentsline{toc}{chapter}{目录}\tableofcontents}
-% 目录字体设置
-% \usepackage{subfigure}
-% \usepackage[subfigure]{tocloft}
-% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % 目录后一行连续的点
-% \renewcommand{\cftsecfont}{\rmfamily}
-% \renewcommand{\cftsecpagefont}{\rmfamily}
-% 目录居中
-% \renewcommand*\contentsname{\hfill 目~~录 \hfill}
